@@ -1,6 +1,5 @@
 package com.playground.fun.dataStructures;
 
-import java.security.KeyStore;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -74,4 +73,23 @@ public class Maps {
      * Double Hashing - use second hash fucntion to determine the step size for probing. calculate the next buckat as hash(key) + i @ has2(key)
      * Double Hashing - better distrubution than linear or quadratic  probing.
      */
+
+
+    /**
+     *
+     */
+    public static void main(String[] args){
+        Map<Integer, String> map = new HashMap<>();
+
+        map.put(100, "Apple");
+        map.put(101, "Banana");
+        map.put(102, "Cherry");
+
+        for(Map.Entry m : map.entrySet()){
+            System.out.println("Key: " + m.getKey() + ", Value: " + m.getValue());
+        }
+        String[] args1 = new String[0];
+        examples(args1);
+
+    }
 }

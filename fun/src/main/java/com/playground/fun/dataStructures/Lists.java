@@ -3,11 +3,12 @@ package com.playground.fun.dataStructures;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Lists {
 /**
  *  Collections in java
- *  - gourp of individual objects treated as a single unit
+ *  - group of individual objects treated as a single unit
  *
  */
 
@@ -60,4 +61,31 @@ public class Lists {
         System.out.println("After deletions: " + object);
     }
 
+    /**
+     *  List interface:
+     *  - sub interface of the java collections interface
+     *  - index based methods to insert, up[date, delete, and search elements
+     *  - can have duplicate elements
+     *  - can also store null elements in the list
+     *  - list preserves the insertion order
+     *  - positional access and insertion of elements
+     * @param args
+     */
+    public static void listExample(String[] args) {
+        List<String> list = new ArrayList<>();
+
+        list.add("Apple");
+        list.add("banana");
+        list.add(null);
+
+        for(int i = 0; i < list.size(); i++){
+            System.out.println("Element at index " + i + ": " + list.get(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        testArray(new Integer[]{});
+        linkedListExample(new String[]{});
+        listExample(new String[]{});
+    }
 }

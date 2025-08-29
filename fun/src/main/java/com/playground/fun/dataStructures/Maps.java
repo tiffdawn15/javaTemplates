@@ -12,24 +12,20 @@ public class Maps {
      * - Common implementations include HashMap, TreeMap, and LinkedHashMap
      * - Used for fast lookups, insertions, and deletions based on keys
      */
-
     public static void examples(String[] args) {
         HashMap<String, String> map = new HashMap<>();
 
         map.put("name", "Tiff is Great");
-
         if (map.containsValue("Tiff is Great")) {
             map.put("name", "Drew is fantastic");
         } else {
             System.out.println("Map does not contain the value: Tiff is Great");
         }
-
     }
-
-
     /**
      * HashMap Collisions - 2+ pieces of data to the same index.
      * Two different keys generate the same hash code because array is finiate.
+     * equals and hashCode contract, two unequal objects in Java can have the same hash code.
      */
 
 
@@ -69,9 +65,9 @@ public class Maps {
      * When collision occurs the algo searches for an alternative location w/in the array to place the key-value pari
      *
      * Linear probing - after collision, the next index is checked sequentially until an empty slot is found
-     * Quadratic probign - uses quadratic incrments (1, 3, 4, 10, 15) away from the collision point. Helps reduce clustering
-     * Double Hashing - use second hash fucntion to determine the step size for probing. calculate the next buckat as hash(key) + i @ has2(key)
-     * Double Hashing - better distrubution than linear or quadratic  probing.
+     * Quadratic probing - uses quadratic increments (1, 3, 4, 10, 15) away from the collision point. Helps reduce clustering
+     * Double Hashing - use second hash function to determine the step size for probing. calculate the next buckat as hash(key) + i @ has2(key)
+     * Double Hashing - better distribution than linear or quadratic  probing.
      */
 
 
